@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What kind of triangle is it?</title>
+</head>
+<body>
+    <script>
+    function determineTriangle(a, b, c) {
+        if (a === b && b === c) {
+            window.alert("Your triangle is equilateral.");
+        } else if (a === b || a === c || b === c) {
+            window.alert("Your triangle is isosceles.");
+        } else {
+            window.alert("Your triangle is scalene.");
+        }
+    }
+    
+    function main() {
+        var a = prompt("Enter side a:");
+        var b = prompt("Enter side b:");
+        var c = prompt("Enter side c:");
+    
+        if (!isNaN(a) || !isNaN(b) || !isNaN(c)) {
+            determineTriangle(parseFloat(a), parseFloat(b), parseFloat(c));
+        } else {
+            window.alert("that is NOT a triangle.");
+        }
+    }
+    main();</script>
+</body>
+</html>
